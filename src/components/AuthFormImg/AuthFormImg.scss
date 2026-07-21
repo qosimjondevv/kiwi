@@ -1,0 +1,44 @@
+.authFormImg {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.authFormImg-text {
+  position: absolute;
+  left: 24px;
+  bottom: 254px;
+  width: 280px;
+  background: white;
+  padding: 28px 22px;
+  border-radius: 30% 30% 30% 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  .authFormImg-logo {
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #41d481;
+  }
+  p {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 19px;
+    color: #787993;
+  }
+  button {
+    all: unset;
+    margin-top: 18px;
+    cursor: pointer;
+    color: #41d481;
+    font-size: 16px;
+    font-weight: 700;
+    border: 1px solid #41d481;
+    border-radius: 6px;
+    padding: 8px 16px;
+  }
+}

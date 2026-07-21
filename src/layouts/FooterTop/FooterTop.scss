@@ -1,0 +1,14 @@
+.footerTop {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.blog {
+  display: flex;
+  .apps {
+    display: flex;
+    gap: 12px;
+  }
+}

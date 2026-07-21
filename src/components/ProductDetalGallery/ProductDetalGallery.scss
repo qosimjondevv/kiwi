@@ -1,0 +1,52 @@
+.gallery {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.gallery-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 90px;
+  max-height: 490px;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+  }
+}
+
+.thumb {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.2s;
+}
+
+.thumb:hover {
+  border-color: #35c46a;
+}
+
+.thumb.active {
+  border-color: #35c46a;
+}
+
+.gallery-right {
+  flex: 1;
+}
+
+.mainImage {
+  width: 100%;
+  max-width: 700px;
+  height: 490px;
+  object-fit: cover;
+  display: block;
+}

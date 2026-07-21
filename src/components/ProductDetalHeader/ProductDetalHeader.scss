@@ -1,0 +1,18 @@
+.productDetalHeader {
+  margin-top: 24px;
+  .cityName {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .linkText {
+    color: #787993;
+    text-decoration: none;
+  }
+  .productDetal-title {
+    font-weight: 500;
+    font-size: 34px;
+    margin-top: 24px;
+    color: #414d6a;
+  }
+}

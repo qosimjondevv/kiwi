@@ -1,0 +1,26 @@
+.footerTopPages {
+  background: #282b30;
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+.footerTopPages-aps {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .footerTopPagesImg {
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 12px;
+  }
+  .footerTopPages-apps {
+    display: flex;
+    gap: 18px;
+  }
+  h5 {
+    max-width: 350px;
+    color: #98a4b7;
+    font-size: 16px;
+    font-weight: 600;
+  }
+}

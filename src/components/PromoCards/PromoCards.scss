@@ -1,0 +1,62 @@
+.blue {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: #b6cafb29;
+  margin-top: 32px;
+}
+.promo-cards {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scrollbar-width: none; 
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.promoCard {
+  position: relative;
+//   flex: 0 0 359px;
+  width: 359px;
+  height: 238px;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 24px;
+  cursor: pointer;
+
+  img {
+    position: absolute;
+    right: -10px;
+    bottom: 0;
+    max-width: 65%;
+    max-height: 85%;
+    object-fit: contain;
+    z-index: 1;
+  }
+}
+
+.promoCard-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  h4 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+
+  p {
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+
+    span {
+      margin-left: 4px;
+    }
+  }
+}

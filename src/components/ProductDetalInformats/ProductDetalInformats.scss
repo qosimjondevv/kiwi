@@ -1,0 +1,107 @@
+.productDetalInfor {
+  width: 420px;
+}
+
+.productInfo-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #5f6b86;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.productInfo-added {
+  display: flex;
+  gap: 4px;
+
+  h4 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+.productInfo-price {
+  font-size: 52px;
+  font-weight: 500;
+  color: #414d6a;
+  margin-bottom: 16px;
+}
+
+.productInfo-location {
+  color: #4e72ca;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: underline;
+  margin-bottom: 18px;
+}
+
+.pruductInfo-seller {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.phoneBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #41d481;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.phoneBtn span {
+  padding: 0 20px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.phoneBtn button {
+  all: unset;
+  cursor: pointer;
+  background: #2bc66b;
+  color: #1a1a1a;
+  padding: 14px 22px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 20px;
+}
+
+.productInfo-author {
+  margin-top: 20px;
+  font-size: 15px;
+  color: #414d6a;
+}
+
+.productInfo-author span {
+  color: #35c46a;
+  font-weight: 700;
+}
+
+.productInfo-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.btn-call,
+.btn-price {
+  all: unset;
+  cursor: pointer;
+  padding: 14px 26px;
+  border-radius: 28px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.btn-call {
+  background: #304ffe;
+}
+
+.btn-price {
+  background: #5579d6;
+}

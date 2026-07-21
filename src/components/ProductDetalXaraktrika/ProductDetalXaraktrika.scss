@@ -1,0 +1,70 @@
+.xaraktrika {
+  margin-top: 30px;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 24px;
+}
+
+.xaraktrika-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid #e5e5e5;
+  border-left: 1px solid #e5e5e5;
+}
+
+.xaraktrika-item {
+  padding: 14px;
+  border-right: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+
+  p {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #444444;
+    font-weight: 500;
+  }
+
+  span {
+    font-size: 16px;
+    color: #444444;
+    font-weight: 500;
+  }
+}
+
+.xaraktrika-nearby {
+  padding: 18px;
+  border: 1px solid #e5e5e5;
+  border-top: none;
+
+  p {
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: #888;
+    font-weight: 500;
+  }
+
+  span {
+    color: #4e72ca;
+    line-height: 1.7;
+    cursor: pointer;
+  }
+}
+
+.description {
+  margin-top: 28px;
+  color: #444;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.views {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+
+  color: #444444;
+  font-size: 14px;
+  p {
+    font-size: 14px;
+    color: red;
+  }
+}

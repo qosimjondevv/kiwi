@@ -1,0 +1,1 @@
+export { CategoriaPage } from "./CategoriaPage";

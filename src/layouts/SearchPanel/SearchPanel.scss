@@ -1,0 +1,97 @@
+.searchPanel {
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.08);
+}
+
+.rup {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.searchPanel-inner {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+  padding: 2px 0px 2px 16px;
+  border: 1px solid #9797977f;
+  border-radius: 22.5px;
+}
+
+.dropdown {
+  all: unset;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+}
+
+.category {
+  padding-right: 12px;
+  border-right: 1px solid #e5e5e5;
+}
+
+.region {
+  padding-left: 12px;
+  border-left: 1px solid #e5e5e5;
+}
+
+.searchInput {
+  flex: 1;
+  display: flex;
+  align-items: center;
+
+  input {
+    all: unset;
+    width: 100%;
+    font-size: 15px;
+    color: #1a1a1a;
+
+    &::placeholder {
+      color: #9b9b9b;
+    }
+  }
+}
+
+.findBtn {
+  all: unset;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background: #35c46a;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 14px 18px;
+  border-radius: 22px;
+}
+
+.addBtn {
+  all: unset;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  background: #19d476;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 0 16px 0 0;
+  border-radius: 22px;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #11b463;
+  margin-right: 12px;
+}

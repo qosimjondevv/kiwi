@@ -1,0 +1,57 @@
+.navbar {
+  width: 100%;
+  background: #fff;
+}
+.shadow {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+.logo {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.logo p {
+  width: 155px;
+  font-weight: 700;
+  color: black;
+  font-size: 16px;
+}
+.pages {
+  display: flex;
+  gap: 30px;
+}
+.pages button {
+  font-weight: 500;
+  line-height: 100%;
+  font-size: 16px;
+  all: unset;
+  cursor: pointer;
+}
+.lang {
+  display: flex;
+  gap: 12px;
+}
+.lang button {
+  all: unset;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4a4a4a;
+  cursor: pointer;
+}
+.regiter {
+  display: flex;
+  gap: 12px;
+}
+.regiter button {
+  all: unset;
+  color: #4e72ca;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+}
