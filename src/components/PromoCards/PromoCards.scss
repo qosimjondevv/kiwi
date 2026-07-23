@@ -1,3 +1,5 @@
+@use "../../style/breakpoints" as *;
+
 .blue {
   display: flex;
   align-items: center;
@@ -9,7 +11,7 @@
   display: flex;
   gap: 16px;
   overflow-x: auto;
-  scrollbar-width: none; 
+  scrollbar-width: none;
 
   &::-webkit-scrollbar {
     display: none;
@@ -18,7 +20,7 @@
 
 .promoCard {
   position: relative;
-//   flex: 0 0 359px;
+  //   flex: 0 0 359px;
   width: 359px;
   height: 238px;
   border-radius: 12px;
@@ -30,8 +32,8 @@
     position: absolute;
     right: -10px;
     bottom: 0;
-    max-width: 65%;
-    max-height: 85%;
+    max-width: 50%;
+    max-height: 70%;
     object-fit: contain;
     z-index: 1;
   }
@@ -57,6 +59,37 @@
 
     span {
       margin-left: 4px;
+    }
+  }
+}
+
+// ////////////////////// media
+
+.blue {
+  @include mobile {
+    margin-top: 2px;
+  }
+}
+
+.promoCard {
+  @include tablet {
+    width: 280px;
+    height: 190px;
+  }
+
+  @include mobile {
+    width: 240px;
+    height: 160px;
+    img {
+      max-width: 45%;
+      max-height: 65%;
+    }
+  }
+}
+.promoCard-text{
+  @include mobile {
+    h4{
+      font-size: 16px;
     }
   }
 }

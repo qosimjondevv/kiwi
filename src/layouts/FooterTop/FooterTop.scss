@@ -1,3 +1,4 @@
+@use "../../style/breakpoints" as *;
 .footerTop {
   margin-top: 32px;
   margin-bottom: 32px;
@@ -10,5 +11,28 @@
   .apps {
     display: flex;
     gap: 12px;
+  }
+}
+
+///////////////////////////////////////// media
+
+.footerTop {
+  @include mobile {
+    margin-top: 22px;
+    margin-bottom: 22px;
+    gap: 16px;
+    text-align: center;
+    .blog {
+      img {
+        width: 55px;
+      }
+    }
+    .apps {
+      display: flex;
+      gap: 4px;
+      img {
+        width: 120px;
+      }
+    }
   }
 }

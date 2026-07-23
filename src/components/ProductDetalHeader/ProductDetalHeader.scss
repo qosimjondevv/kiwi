@@ -1,5 +1,6 @@
+@use "../../style/breakpoints" as *;
+
 .productDetalHeader {
-  margin-top: 24px;
   .cityName {
     display: flex;
     flex-wrap: wrap;
@@ -14,5 +15,23 @@
     font-size: 34px;
     margin-top: 24px;
     color: #414d6a;
+  }
+}
+
+// ///////////////////////////////// meadi
+.productDetalHeader {
+  margin-top: 24px;
+
+  .productDetal-title {
+    font-size: 34px;
+
+    @include tablet {
+      font-size: 26px;
+    }
+
+    @include mobile {
+      font-size: 20px;
+      margin-top: 16px;
+    }
   }
 }

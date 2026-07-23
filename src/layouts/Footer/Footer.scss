@@ -1,3 +1,4 @@
+@use "../../style/breakpoints" as *;
 footer {
   padding: 40px 0px;
   background: #33383c;
@@ -44,5 +45,30 @@ footer {
   h4 {
     margin-top: 24px;
     color: #878f99;
+  }
+}
+
+// ///////////////////////////// media
+
+.footerGrid {
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  @include mobile {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+.footerBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include mobile {
+    flex-direction: column;
+    font-size: 12px;
   }
 }

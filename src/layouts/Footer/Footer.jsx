@@ -34,7 +34,6 @@ export const Footer = () => {
             {footerBottomLinks.map((item, el) => (
               <h4 key={el}>{item}</h4>
             ))}
-            <h4></h4>
           </div>
         </div>
       </footer>

@@ -1,3 +1,4 @@
+@use "../../style/breakpoints" as *;
 .navbar {
   width: 100%;
   background: #fff;
@@ -5,12 +6,7 @@
 .shadow {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
-.navbar-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 72px;
-}
+
 .logo {
   display: flex;
   gap: 14px;
@@ -20,7 +16,7 @@
   width: 155px;
   font-weight: 700;
   color: black;
-  font-size: 16px;
+  font-size: 14px;
 }
 .pages {
   display: flex;
@@ -54,4 +50,46 @@
   font-size: 17px;
   font-weight: 700;
   cursor: pointer;
+}
+// ///////////////////////////////////////// media
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+
+  @include mobile {
+    .logo img{
+      width: 48px;
+    }
+  }
+}
+
+.logo p {
+  @include mobile {
+    display: none;
+  }
+}
+
+.pages {
+  @include tablet {
+    gap: 16px;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.lang {
+  @include mobile {
+    display: none;
+  }
+}
+
+.regiter {
+  @include mobile {
+    font-size: 12px;
+    gap: 8px;
+  }
 }

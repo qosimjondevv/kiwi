@@ -1,3 +1,5 @@
+@use "../../style/breakpoints" as *;
+
 .authFormImg {
   position: relative;
   border-radius: 12px;
@@ -40,5 +42,15 @@
     border: 1px solid #41d481;
     border-radius: 6px;
     padding: 8px 16px;
+  }
+}
+// /////////////////////////////// media
+.authFormImg {
+  @include tablet {
+    display: none;
+  }
+
+  @include mobile {
+    display: none;
   }
 }

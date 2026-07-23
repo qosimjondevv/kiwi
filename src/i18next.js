@@ -11,7 +11,7 @@ i18next.use(initReactI18next).init({
       translation: uz,
     },
   },
-  lang: localStorage.getItem("language") || "ru",
+  lng: localStorage.getItem("language") || "ru",
 
   fallbackLng: "ru",
 

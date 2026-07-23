@@ -1,6 +1,17 @@
+@use "../../style/breakpoints" as *;
+
 .authPage {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
+
+  @include tablet {
+    flex-direction: column;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    padding: 20px 10px;
+  }
 }

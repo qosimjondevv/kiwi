@@ -1,3 +1,5 @@
+@use "../../style/breakpoints" as *;
+
 .cards {
   margin-top: 50px;
   display: flex;
@@ -28,4 +30,32 @@
   flex-direction: column;
   align-items: center;
   cursor: pointer;
+}
+
+// //////////////////////////////// meadi
+
+.cards {
+  @include tablet {
+    gap: 28px;
+  }
+
+  @include mobile {
+    margin-top: 24px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    .card-title {
+      font-size: 12px;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.card {
+  @include mobile {
+    width: 56px;
+    height: 56px;
+  }
 }

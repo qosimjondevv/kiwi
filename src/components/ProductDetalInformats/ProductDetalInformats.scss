@@ -1,6 +1,4 @@
-.productDetalInfor {
-  width: 420px;
-}
+@use "../../style/breakpoints" as *;
 
 .productInfo-date {
   display: flex;
@@ -104,4 +102,66 @@
 
 .btn-price {
   background: #5579d6;
+}
+////////////////////////////////////////////////////// meadi
+
+.productDetalInfor {
+  width: 420px;
+
+  @include tablet {
+    width: 100%;
+  }
+
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.productInfo-price {
+  font-size: 52px;
+
+  @include tablet {
+    font-size: 40px;
+  }
+
+  @include mobile {
+    font-size: 32px;
+  }
+}
+
+.pruductInfo-seller {
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.phoneBtn {
+  @include mobile {
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 12px;
+  }
+
+  span {
+    @include mobile {
+      text-align: center;
+      padding: 10px 0 0 0;
+    }
+  }
+
+  button {
+    @include mobile {
+      border-radius: 12px;
+      width: 100%;
+    }
+  }
+}
+
+.productInfo-actions {
+  display: flex;
+  gap: 12px;
+
+  @include mobile {
+    flex-direction: column;
+  }
 }

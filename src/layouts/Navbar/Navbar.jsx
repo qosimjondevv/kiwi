@@ -6,9 +6,9 @@ import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 
 export const Navbar = ({ shadow = true }) => {
-  const changeLanguage = (lang) => {
-    i18next.changeLanguage(lang);
-    localStorage.setItem("language", lang);
+  const changeLanguage = (lng) => {
+    i18next.changeLanguage(lng);
+    localStorage.setItem("language", lng);
   };
   const navigate = useNavigate();
 

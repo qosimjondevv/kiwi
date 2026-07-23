@@ -13,7 +13,7 @@ export const AuthForm = () => {
 
           <div className="authForm-form">
             <label>Введите email или номер телефона</label>
-            <input type="number" placeholder="99890 770 10 73" />
+            <input type="text" placeholder="99890 770 10 73" />
           </div>
 
           <div className="authForm-form">
@@ -33,8 +33,6 @@ export const AuthForm = () => {
             Восстоновить ваше пароль
           </a>
         </div>
-
-        <div className="authForm-images"></div>
       </div>
     </>
   );

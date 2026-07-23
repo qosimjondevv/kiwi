@@ -1,3 +1,4 @@
+@use "../../style/breakpoints" as *;
 .footerTopPages {
   background: #282b30;
   padding-bottom: 25px;
@@ -22,5 +23,21 @@
     color: #98a4b7;
     font-size: 16px;
     font-weight: 600;
+  }
+}
+
+//////////////////////////// media
+
+.footerTopPages-aps {
+  @include tablet {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  h5 {
+    @include mobile {
+      max-width: 100%;
+    }
   }
 }
