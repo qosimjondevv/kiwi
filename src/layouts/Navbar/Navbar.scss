@@ -51,15 +51,20 @@
   font-weight: 700;
   cursor: pointer;
 }
+.burger-menu {
+  display: none;
+}
 // ///////////////////////////////////////// media
 .navbar-container {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 72px;
 
   @include mobile {
-    .logo img{
+    // height: 56px;
+    .logo img {
       width: 48px;
     }
   }
@@ -91,5 +96,31 @@
   @include mobile {
     font-size: 12px;
     gap: 8px;
+  }
+}
+
+@include mobile {
+  .burger-menu {
+    display: block;
+    all: unset;
+  }
+  .mobilMenu {
+    position: absolute;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+
+    top: 56px;
+    left: 0;
+    width: 100%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+
+    button {
+      all: unset;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+      padding: 14px 0px;
+    }
   }
 }

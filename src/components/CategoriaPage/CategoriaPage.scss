@@ -5,7 +5,7 @@
   display: flex;
   gap: 50px;
 }
-.card {
+.cardCategory {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,15 +14,15 @@
   padding: 16px;
   background-color: #b6cafb;
   border-radius: 20px;
-  .card-title {
+  .cardCategory-title {
     font-weight: 700;
     font-size: 14px;
     color: #4a4a4a;
     margin-top: 6px;
   }
-  .card:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
+}
+.cardCategory:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .barel {
@@ -43,7 +43,7 @@
     margin-top: 24px;
     overflow-x: auto;
     scrollbar-width: none;
-    .card-title {
+    .cardCategory-title {
       font-size: 12px;
     }
 
@@ -53,7 +53,7 @@
   }
 }
 
-.card {
+.cardCategory {
   @include mobile {
     width: 56px;
     height: 56px;

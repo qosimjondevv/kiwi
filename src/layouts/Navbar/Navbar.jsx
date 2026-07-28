@@ -4,14 +4,19 @@ import { navbarLink } from "../../constants/navbarLink";
 import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
+import { useState } from "react";
+import { Menu } from "lucide-react";
+// import { useTheme } from "../../context/ThemeContext";
 
 export const Navbar = ({ shadow = true }) => {
+  // const { theme, toggleTheme } = useTheme();
+  const [burgerOpen, setBurgerOpen] = useState(false);
+
   const changeLanguage = (lng) => {
     i18next.changeLanguage(lng);
     localStorage.setItem("language", lng);
   };
   const navigate = useNavigate();
-
   const { t } = useTranslation();
   return (
     <nav className={`navbar ${shadow ? "shadow" : ""}`}>
@@ -28,6 +33,9 @@ export const Navbar = ({ shadow = true }) => {
             <button key={page}>{page}</button>
           ))}
         </div>
+
+        {/* <button onClick={toggleTheme}>{theme === "light" ? "🎆" : "😂"}</button> */}
+
         <div className="lang">
           <button onClick={() => changeLanguage("ru")}>Рус</button>
           <span> | </span>
@@ -38,6 +46,22 @@ export const Navbar = ({ shadow = true }) => {
           <span>|</span>
           <button onClick={() => navigate("/register")}>Регистрация</button>
         </div>
+
+        {/* ///////////////////////// b */}
+        <button
+          className="burger-menu"
+          onClick={() => setBurgerOpen(!burgerOpen)}
+        >
+          <Menu />
+        </button>
+
+        {burgerOpen && (
+          <div className="mobilMenu">
+            {navbarLink.map((page) => (
+              <button key={page}>{page}</button>
+            ))}
+          </div>
+        )}
       </div>
     </nav>
   );

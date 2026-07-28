@@ -2,7 +2,6 @@ export { navbarLink } from "./navbarLink";
 export { categoriaLink } from "./categoriaLink";
 export { promoCards } from "./promoCards";
 export { tabsLink } from "./tabsLink";
-export { tabsProducts } from "./tabsProducts";
 export { heroLink } from "./heroLink";
 export { productDetal } from "./productDetal";
 export { productCityName } from "./productCityName";

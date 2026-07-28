@@ -1,7 +1,7 @@
 import { productDetal } from "../../constants/productDetal";
 import "./ProductDetalXaraktrika.scss";
 
-export const ProductDetalXaraktrika = () => {
+export const ProductDetalXaraktrika = ({ product }) => {
   return (
     <>
       <div className="xaraktrika">
@@ -22,7 +22,7 @@ export const ProductDetalXaraktrika = () => {
         )}
 
         <div className="description">
-          <p>{productDetal.descriripition}</p>
+          <p>{product.description}</p>
         </div>
 
         <div className="views">

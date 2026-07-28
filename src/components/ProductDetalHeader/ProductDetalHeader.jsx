@@ -1,8 +1,8 @@
 import "./ProductDetalHeader.scss";
-import { productCityName, productDetal } from "../../constants";
+import { productCityName } from "../../constants";
 import { Link } from "react-router-dom";
 
-export const ProductDetalHeader = () => {
+export const ProductDetalHeader = ({ product }) => {
   return (
     <>
       <div className="productDetalHeader container">
@@ -13,7 +13,7 @@ export const ProductDetalHeader = () => {
             </Link>
           ))}
         </div>
-        <h1 className="productDetal-title">{productDetal.title}</h1>
+        <h1 className="productDetal-title">{product.title}</h1>
       </div>
     </>
   );

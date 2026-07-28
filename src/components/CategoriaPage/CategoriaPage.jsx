@@ -8,10 +8,10 @@ export const CategoriaPage = () => {
           const Icon = item.icon;
           return (
             <div className="barel" key={item.title}>
-              <div className="card">
+              <div className="cardCategory">
                 <Icon />
               </div>
-              <p className="card-title">{item.title}</p>
+              <p className="cardCategory-title">{item.title}</p>
             </div>
           );
         })}

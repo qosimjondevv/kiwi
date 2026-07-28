@@ -2,23 +2,21 @@ import { productDetal } from "../../constants/productDetal";
 import { ProductDetalXaraktrika } from "../ProductDetalXaraktrika";
 import "./ProductDetalInformats.scss";
 
-export const ProductDetalInformats = () => {
+export const ProductDetalInformats = ({ product }) => {
   return (
     <>
       <div className="productDetalInfor">
         <div className="productInfo-date">
-          {productDetal.code}
+          Артикул: {product.id}
           <div className="productInfo-added">
-            <h4> обновлено:</h4> {productDetal.updated} <h4>добавлено:</h4>{" "}
+            <h4> обновлено:</h4> {productDetal.updated} <h4>добавлено:</h4>
             {productDetal.added}
           </div>
         </div>
 
-        <div className="productInfo-price">
-          {productDetal.price} {productDetal.currency}
-        </div>
+        <div className="productInfo-price">{product.price} $</div>
 
-        <p className="productInfo-location">{productDetal.locarion}</p>
+        <p className="productInfo-location">{product.brand}</p>
 
         <div className="pruductInfo-seller">
           {productDetal.seller.phone.map((phone, index) => (
@@ -30,7 +28,7 @@ export const ProductDetalInformats = () => {
         </div>
 
         <p className="productInfo-author">
-          Автор обьявлении: <span>{productDetal.seller.name}</span>
+          Автор обьявлении: <span>{product.category}</span>
         </p>
 
         <div className="productInfo-actions">
@@ -38,7 +36,7 @@ export const ProductDetalInformats = () => {
           <button className="btn-price">Предложить свою цену</button>
         </div>
 
-        <ProductDetalXaraktrika />
+        <ProductDetalXaraktrika product={product} />
       </div>
     </>
   );

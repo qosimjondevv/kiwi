@@ -1,19 +1,23 @@
-import { useState } from "react";
-import { productDetal } from "../../constants";
+import { useEffect, useState } from "react";
 import "./ProductDetalGallery.scss";
+import classNames from "classnames";
 
-export const ProductDetalGallery = () => {
-  const [activeImg, setActiveImg] = useState(productDetal.images[0]);
+export const ProductDetalGallery = ({ product }) => {
+  const [activeImg, setActiveImg] = useState(product.images[0]);
+
+  useEffect(() => {
+    setActiveImg(product.images[0]);
+  }, [product]);
 
   return (
     <div className="gallery">
       <div className="gallery-left">
-        {productDetal.images.map((image, index) => (
+        {product.images.map((image, imgI) => (
           <img
-            key={index}
+            key={imgI}
             src={image}
             alt=""
-            className={`thumb ${activeImg === image ? "active" : ""}`}
+            className={classNames("thumb", { active: activeImg === image })}
             onClick={() => setActiveImg(image)}
           />
         ))}

@@ -24,3 +24,10 @@ ul li {
   padding-right: 12px;
   box-sizing: border-box;
 }
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition:
+    background 0.3s,
+    color 0.3s;
+}

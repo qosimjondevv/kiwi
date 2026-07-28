@@ -7,10 +7,8 @@ export const AppRoute = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/product" element={<ProductDetal />} />
+        <Route path="/product/:id" element={<ProductDetal />} />
       </Routes>
     </>
   );
 };
-
-/*{product/:id}*/
