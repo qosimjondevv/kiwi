@@ -13,6 +13,7 @@ export const useAuth = () => {
     try {
       const data = await auth(username, password);
       setUser(data);
+      localStorage.setItem("token", data.accessToken);
       return data;
     } catch (error) {
       setError(error.message);
@@ -23,4 +24,3 @@ export const useAuth = () => {
 
   return { user, loading, error, login };
 };
-

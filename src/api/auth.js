@@ -7,7 +7,10 @@ export const auth = async (username, password) => {
     body: JSON.stringify({ username, password }),
   });
 
-  if (!response.ok) throw new Error("login yoki parolingiz natogri");
+  if (!response.ok) {
+    const data = await response.json().catch(() => null);
+    throw new Error(data?.message || "login yoki parolingiz noto'g'ri");
+  }
 
   return await response.json();
 };

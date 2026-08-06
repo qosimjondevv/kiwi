@@ -75,6 +75,37 @@
   text-align: center;
 }
 
+.authForm-error {
+  margin-top: 12px;
+  color: #e53935;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.authForm-register {
+  width: 100%;
+  margin-top: 12px;
+  border-radius: 5px;
+  border: 1px solid #41d481;
+  background: transparent;
+  font-weight: 600;
+  font-size: 16px;
+  color: #41d481;
+  padding: 18px 0px;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.authForm-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 // ////////////////////////////// media
 
 .authForm {
@@ -95,8 +126,8 @@
     padding: 14px 16px;
   }
 }
-.authForm-submit{
-  @include mobile{
+.authForm-submit {
+  @include mobile {
     padding: 15px 0px;
   }
 }

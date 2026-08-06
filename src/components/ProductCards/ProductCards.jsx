@@ -1,10 +1,10 @@
 import "./ProductCards.scss";
-import { useState } from "react";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
-export const ProductCards = ({ labels, items }) => {
-  const [activeTab, setActiveTab] = useState(0);
+export const ProductCards = ({ labels, items, activeTab, onTabChange }) => {
+  const { t } = useTranslation();
   return (
     <>
       <div className="container product-Card">
@@ -13,7 +13,7 @@ export const ProductCards = ({ labels, items }) => {
             <button
               key={lab}
               className={classNames({ active: activeTab === e })}
-              onClick={() => setActiveTab(e)}
+              onClick={() => onTabChange(e)}
             >
               {lab}
             </button>
@@ -37,7 +37,7 @@ export const ProductCards = ({ labels, items }) => {
 
         <div className="showMore">
           <button>
-            Показать еще <span>⌄</span>
+            {t("showMore")} <span>⌄</span>
           </button>
         </div>
       </div>

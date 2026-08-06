@@ -1,6 +1,8 @@
 import { ChevronDown, Plus } from "lucide-react";
 import "./SearchPanel.scss";
+import { useState } from "react";
 export const SearchPanel = () => {
+  const [query, setQuery] = useState("");
   return (
     <div className="searchPanel">
       <div className="container rup">
@@ -10,7 +12,12 @@ export const SearchPanel = () => {
           </button>
 
           <div className="searchInput">
-            <input type="text" placeholder="Что будем искать ?" />
+            <input
+              type="text"
+              placeholder="Что будем искать ?"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+            />
           </div>
 
           <button className="dropdown region">

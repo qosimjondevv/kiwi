@@ -1,14 +1,7 @@
-import { useEffect, useState } from "react";
 import "./ProductDetalGallery.scss";
 import classNames from "classnames";
 
-export const ProductDetalGallery = ({ product }) => {
-  const [activeImg, setActiveImg] = useState(product.images[0]);
-
-  useEffect(() => {
-    setActiveImg(product.images[0]);
-  }, [product]);
-
+export const ProductDetalGallery = ({ product, activeImg, onSelectImg }) => {
   return (
     <div className="gallery">
       <div className="gallery-left">
@@ -18,7 +11,7 @@ export const ProductDetalGallery = ({ product }) => {
             src={image}
             alt=""
             className={classNames("thumb", { active: activeImg === image })}
-            onClick={() => setActiveImg(image)}
+            onClick={() => onSelectImg(image)}
           />
         ))}
       </div>

@@ -1,5 +1,6 @@
 import "./ProductDetal.scss";
-
+import { useParams } from "react-router-dom";
+import { Loader2 } from "lucide-react";
 import { FooterTopPages, Navbar, SearchPanel } from "../../layouts";
 import {
   ProductCards,
@@ -7,15 +8,20 @@ import {
   ProductDetalHeader,
   ProductDetalInformats,
 } from "../../components";
-import { useParams } from "react-router-dom";
-import { useProductDetal, useProducts } from "../../hooks";
+import {
+  useProductDetal,
+  useProducts,
+  useProductTabs,
+  useGallery,
+} from "../../hooks";
 import { heroLink } from "../../constants";
-import { Loader2 } from "lucide-react";
 
 export const ProductDetal = () => {
   const { id } = useParams();
   const { product, loading, error } = useProductDetal(id);
   const { products } = useProducts();
+  const gallery = useGallery(product);
+  const tabs = useProductTabs();
 
   return (
     <>
@@ -39,12 +45,21 @@ export const ProductDetal = () => {
           <ProductDetalHeader product={product} />
           <div className="container">
             <div className="child">
-              <ProductDetalGallery product={product} />
+              <ProductDetalGallery
+                product={product}
+                activeImg={gallery.activeImg}
+                onSelectImg={gallery.setActiveImg}
+              />
               <ProductDetalInformats product={product} />
             </div>
           </div>
 
-          <ProductCards labels={heroLink} items={products} />
+          <ProductCards
+            labels={heroLink}
+            items={products}
+            activeTab={tabs.activeTab}
+            onTabChange={tabs.setActiveTab}
+          />
         </>
       )}
 

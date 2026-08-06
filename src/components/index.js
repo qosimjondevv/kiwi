@@ -7,3 +7,4 @@ export { ProductDetalHeader } from "./ProductDetalHeader";
 export { ProductDetalGallery } from "./ProductDetalGallery";
 export { ProductDetalInformats } from "./ProductDetalInformats";
 export { ProductDetalXaraktrika } from "./ProductDetalXaraktrika";
+ 

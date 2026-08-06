@@ -37,14 +37,20 @@ export const Navbar = ({ shadow = true }) => {
         {/* <button onClick={toggleTheme}>{theme === "light" ? "🎆" : "😂"}</button> */}
 
         <div className="lang">
-          <button onClick={() => changeLanguage("ru")}>Рус</button>
+          <button onClick={() => changeLanguage("ru")}>
+            {t("navbarLangRu")}
+          </button>
           <span> | </span>
-          <button onClick={() => changeLanguage("uz")}> O’z</button>
+          <button onClick={() => changeLanguage("uz")}>
+            {t("navbarLangUz")}
+          </button>
         </div>
         <div className="regiter">
-          <button>Вход</button>
+          <button>{t("navbarEntranc")}</button>
           <span>|</span>
-          <button onClick={() => navigate("/register")}>Регистрация</button>
+          <button onClick={() => navigate("/register")}>
+            {t("navbarRegistr")}
+          </button>
         </div>
 
         {/* ///////////////////////// b */}
